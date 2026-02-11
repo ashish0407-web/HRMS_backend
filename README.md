@@ -1,92 +1,112 @@
-HRMS Lite – Backend API
+Here is the simplified rewrite of your frontend README.
+I’ve kept the same markdown style, emojis, headings, and structure, removed links, and did not change the meaning—only made it cleaner and more direct.
 
-HRMS Lite is a simple HR Management System backend API built using FastAPI and MongoDB.
+HRMS Lite - Frontend
+
+A modern HR Management System interface built with React.
 
 Features
 
-Employee management (Create, Read, Update, Delete)
+📊 Dashboard with statistics
 
-Attendance tracking
+👥 Employee management
 
-RESTful API with automatic documentation (Swagger)
+✅ Attendance tracking
+
+🎨 Smooth animations
+
+📱 Fully responsive design
 
 Tech Stack
 
-FastAPI – Backend web framework
+React 18 – UI library
 
-MongoDB (Atlas / Local) – Database
+Vite – Build tool
 
-Python 3.9+
+React Router – Navigation
+
+Framer Motion – Animations
+
+Axios – API requests
+
+Lucide React – Icons
 
 Quick Start
 1. Install Dependencies
-# Create virtual environment
-python -m venv venv
+npm install
 
-# Activate virtual environment
-venv\Scripts\activate        # Windows
-source venv/bin/activate    # Mac/Linux
-
-# Install required packages
-pip install -r requirements.txt
-
-2. Environment Setup
+2. Setup Environment
 
 Create a .env file in the project root:
 
-MONGODB_URL=your_mongodb_connection_string
-DATABASE_NAME=hrms_lite
+VITE_API_URL=http://localhost:8000
 
-3. Run the Server
-uvicorn app.main:app --reload --port 8000
+3. Run Development Server
+npm run dev
 
 
-API documentation will be available at:
+Application will be available at:
 
-http://localhost:8000/docs
+http://localhost:5173
 
-API Endpoints
-Employees
+Build for Production
+npm run build
 
-POST /employees – Create a new employee
 
-GET /employees – Get all employees
-
-GET /employees/{id} – Get employee by ID
-
-PUT /employees/{id} – Update employee details
-
-DELETE /employees/{id} – Delete an employee
-
-Attendance
-
-POST /attendance – Mark attendance
-
-GET /attendance – Get all attendance records
-
-GET /attendance/employee/{id} – Get attendance for a specific employee
-
-Example Request
-
-POST /employees
-
-{
-  "employee_id": "EMP001",
-  "full_name": "John Doe",
-  "email": "john@company.com",
-  "department": "Engineering"
-}
+Production files will be generated inside the dist/ folder.
 
 Project Structure
-app/
-├── main.py          # Application entry point
-├── config.py        # Configuration settings
-├── database.py      # Database connection
-├── schemas/         # Request & response validation
-├── services/        # Business logic
-├── routes/          # API routes
-└── exceptions/      # Custom error handling
+src/
+├── api/             # API configuration
+├── components/      # Reusable UI components
+│   ├── common/      # Loaders, modals, etc.
+│   ├── layout/      # Sidebar and layout components
+│   ├── employees/   # Employee-related components
+│   └── attendance/  # Attendance-related components
+├── pages/           # Application pages
+├── styles/          # Global and component styles
+├── utils/           # Helper utilities
+├── App.jsx          # Main application component
+└── main.jsx         # Application entry point
+
+Available Scripts
+
+npm run dev – Start development server
+
+npm run build – Create production build
+
+npm run preview – Preview production build
+
+Pages
+
+Dashboard (/) – Overview and statistics
+
+Employees (/employees) – Employee management
+
+Attendance (/attendance) – Attendance tracking
+
+Deployment
+
+Build the project using npm run build
+
+Upload the dist/ folder to a hosting provider
+
+Configure SPA redirects
+
+Application is ready
 
 License
 
 MIT
+
+If you want next, I can:
+
+🔹 Align backend + frontend README for consistency
+
+🔹 Add screenshots section (without links)
+
+🔹 Make this resume / recruiter optimized
+
+🔹 Prepare deployment explanation for interviews
+
+Just tell me 👍
