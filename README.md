@@ -1,73 +1,73 @@
-# HRMS Lite - Backend API 
+HRMS Lite – Backend API
 
-live link - [LIVE DEMO](https://hrms-lite-api-556b.onrender.com)
+HRMS Lite is a simple HR Management System backend API built using FastAPI and MongoDB.
 
-A simple HR Management System API built with FastAPI and MongoDB.
+Features
 
-## Features
+Employee management (Create, Read, Update, Delete)
 
-- Employee Management (Add, View, Update, Delete)
-- Attendance Tracking
-- REST API with automatic documentation
+Attendance tracking
 
-## Tech Stack
+RESTful API with automatic documentation (Swagger)
 
-- **FastAPI** - Web framework
-- **MongoDB Atlas** - Database
-- **Python 3.9+**
+Tech Stack
 
-## Quick Start
+FastAPI – Backend web framework
 
-### 1. Install Dependencies
+MongoDB (Atlas / Local) – Database
 
-```bash
+Python 3.9+
+
+Quick Start
+1. Install Dependencies
 # Create virtual environment
 python -m venv venv
 
-# Activate it
-venv\Scripts\activate  # Windows
-source venv/bin/activate  # Mac/Linux
+# Activate virtual environment
+venv\Scripts\activate        # Windows
+source venv/bin/activate    # Mac/Linux
 
-# Install packages
+# Install required packages
 pip install -r requirements.txt
-```
 
-### 2. Setup Environment
+2. Environment Setup
 
-Create `.env` file:
+Create a .env file in the project root:
 
-```env
 MONGODB_URL=your_mongodb_connection_string
 DATABASE_NAME=hrms_lite
-```
 
-### 3. Run Server
-
-```bash
+3. Run the Server
 uvicorn app.main:app --reload --port 8000
-```
 
-Visit: http://localhost:8000/docs
 
-## API Endpoints
+API documentation will be available at:
 
-### Employees
+http://localhost:8000/docs
 
-- `POST /employees` - Create employee
-- `GET /employees` - Get all employees
-- `GET /employees/{id}` - Get employee by ID
-- `PUT /employees/{id}` - Update employee
-- `DELETE /employees/{id}` - Delete employee
+API Endpoints
+Employees
 
-### Attendance
+POST /employees – Create a new employee
 
-- `POST /attendance` - Mark attendance
-- `GET /attendance` - Get all attendance
-- `GET /attendance/employee/{id}` - Get employee attendance
+GET /employees – Get all employees
 
-## Example Request
+GET /employees/{id} – Get employee by ID
 
-```json
+PUT /employees/{id} – Update employee details
+
+DELETE /employees/{id} – Delete an employee
+
+Attendance
+
+POST /attendance – Mark attendance
+
+GET /attendance – Get all attendance records
+
+GET /attendance/employee/{id} – Get attendance for a specific employee
+
+Example Request
+
 POST /employees
 
 {
@@ -76,24 +76,17 @@ POST /employees
   "email": "john@company.com",
   "department": "Engineering"
 }
-```
 
-## Project Structure
-
-```
+Project Structure
 app/
-├── main.py          # Entry point
-├── config.py        # Settings
-├── database.py      # DB connection
-├── schemas/         # Data validation
+├── main.py          # Application entry point
+├── config.py        # Configuration settings
+├── database.py      # Database connection
+├── schemas/         # Request & response validation
 ├── services/        # Business logic
-├── routes/          # API endpoints
-└── exceptions/      # Error handling
-```
+├── routes/          # API routes
+└── exceptions/      # Custom error handling
 
-## Deployment
-live link - [LIVE DEMO](https://hrms-lite-api-556b.onrender.com)
-
-## License
+License
 
 MIT
